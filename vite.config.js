@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "./", // ✅ ensures relative paths in built HTML
+  base: "/", // Changed to root path
   plugins: [react()],
   server: {
     port: 5173,
@@ -13,5 +13,13 @@ export default defineConfig({
     sourcemap: false,
     minify: true,
     chunkSizeWarningLimit: 1600,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        assetFileNames: "assets/[name].[ext]",
+        chunkFileNames: "assets/[name].js",
+        entryFileNames: "assets/[name].js",
+      },
+    },
   },
 });
