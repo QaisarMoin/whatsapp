@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import Chat from './Chat';
-import { useState, useEffect } from 'react';
 import io from 'socket.io-client';
-
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8080';
+import { BACKEND_URL } from '../config';
 const socket = io(BACKEND_URL);
 
 const Layout = () => {

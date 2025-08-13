@@ -1,9 +1,8 @@
-import React from 'react';
-
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8080';
+import React, { useState } from 'react';
+import { BACKEND_URL } from '../config';
 
 const Message = ({ message, onDelete }) => {
-  const [showConfirm, setShowConfirm] = React.useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
 
   const handleDeleteClick = (e) => {
     e.stopPropagation();
