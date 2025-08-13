@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   text-align: left;
+  overflow: hidden;
 }
 
 /* Full-screen layout */
@@ -16,6 +17,54 @@
 
 .w-screen {
   width: 100vw;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Hide scrollbars but keep functionality */
+  .overflow-y-auto {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Adjust message sizes */
+  .message {
+    max-width: 85% !important;
+  }
+
+  /* Make input text larger on mobile */
+  input[type="text"],
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Adjust header padding */
+  .mobile-header {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: 0.5rem;
+  }
+
+  /* Adjust bottom nav padding */
+  .mobile-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* WhatsApp Green theme */
+:root {
+  --wa-primary: #008069;
+  --wa-background: #0c1317;
+  --wa-secondary: #202c33;
+  --wa-bubble-out: #005c4b;
+  --wa-bubble-in: #202c33;
+  --wa-text: #e9edef;
+  --wa-text-secondary: #8696a0;
+  --wa-accent: #00a884;
+  --wa-unread: #25d366;
 }
 
 /* Status colors */
