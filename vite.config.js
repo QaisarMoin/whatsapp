@@ -1,17 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: "./", // ✅ ensures relative paths in built HTML
   plugins: [react()],
   server: {
     port: 5173,
-    host: true
+    host: true,
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: false,
     minify: true,
     chunkSizeWarningLimit: 1600,
-  }
-})
+  },
+});
