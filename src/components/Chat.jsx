@@ -227,14 +227,14 @@ const Chat = ({
 
           {/* Chat Messages */}
           <div
-            className="flex-1 overflow-y-auto p-4 border flex flex-col h-[calc(100vh-60px)]"
+            className="flex-1 overflow-y-auto border flex flex-col h-[calc(100vh-65px)]"
             style={{
               backgroundImage:
                 "url('data:image/png;base64,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')",
               backgroundColor: "#0b141a",
             }}
           >
-            <div className="flex-1">
+            <div className="flex-1  px-4">
               {Object.keys(messageGroups).length === 0 ? (
                 <div className="flex items-center justify-center h-full text-[#8696a0]">
                   No messages yet
@@ -267,7 +267,7 @@ const Chat = ({
           </div>
         </div>
       ) : (
-        <div className="flex-1 flex items-center justify-center bg-[#222e35]">
+        <div className="flex-1 flex items-center justify-center bg-[#00a884]/30">
           <div className="text-center p-6">
             <div className="w-16 h-16 mx-auto mb-4 opacity-50">
               <svg

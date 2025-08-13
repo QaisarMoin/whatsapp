@@ -70,15 +70,15 @@ const Sidebar = ({
   return (
     <div
       className={`h-full flex flex-col ${
-        isMobile ? "w-full" : "w-[400px] border-r border-[#222d34]"
+        isMobile ? "w-full" : "w-[400px] border-r border-[#222d34] "
       } bg-[#111b21]`}
     >
-      {/* Mobile Header */}
+      {/* Header */}
       <div
         className={`${
           isMobile
-            ? "flex items-center justify-between p-4 bg-[#008069]"
-            : "hidden"
+            ? "flex items-center justify-between p-4 bg-[#00a884]"
+            : "flex items-center justify-between p-4 bg-[#00a884]"
         }`}
       >
         <h1 className="text-white text-xl font-medium">WhatsApp</h1>
@@ -143,7 +143,7 @@ const Sidebar = ({
           showSearch || !isMobile ? "block" : "hidden"
         } p-3 bg-[#202c33]`}
       >
-        <div className="relative">
+        <div className="relative ">
           <input
             type="text"
             placeholder="Search or start new chat"
