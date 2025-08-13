@@ -73,12 +73,12 @@ const Sidebar = ({
         isMobile ? "w-full" : "w-[400px] border-r border-[#222d34] "
       } bg-[#111b21]`}
     >
-      {/* Header */}
+      {/* Mobile Header */}
       <div
         className={`${
           isMobile
-            ? "flex items-center justify-between p-4 bg-[#00a884]"
-            : "flex items-center justify-between p-4 bg-[#00a884]"
+            ? "flex items-center justify-between p-4 bg-[#008069]"
+            : "hidden"
         }`}
       >
         <h1 className="text-white text-xl font-medium">WhatsApp</h1>
@@ -141,13 +141,13 @@ const Sidebar = ({
       <div
         className={`${
           showSearch || !isMobile ? "block" : "hidden"
-        } p-3 bg-[#202c33]`}
+        } p-3 bg-[#008069]`}
       >
-        <div className="relative ">
+        <div className="relative  ">
           <input
             type="text"
             placeholder="Search or start new chat"
-            className="w-full bg-[#202c33] text-white placeholder-[#8696a0] border border-[#222d34] rounded-lg py-2 px-10 focus:outline-none focus:border-[#00a884]"
+            className="w-full bg-white/80   placeholder-[#8696a0] border border-[#222d34] rounded-lg py-2 px-10 focus:outline-none focus:border-[#00a884] text-black"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
